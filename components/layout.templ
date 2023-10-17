@@ -10,10 +10,10 @@ templ Layout(pageName string) {
 			<link href="/public/global.css" rel="stylesheet"/>
 			<script src="/public/htmx.js"></script>
 			<script>
-			htmx.onLoad(function() {
-    htmx.config.globalViewTransitions = true;
-});
-
+				htmx.on("htmx:load", function(evt) {
+					console.log("htmx is loaded");
+					htmx.config.globalViewTransitions = true;
+				});
 			</script>
 		</head>
 		<body class="px-4 py-8 prose">

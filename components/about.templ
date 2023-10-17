@@ -3,7 +3,7 @@ package components
 templ About() {
 	@Layout("About") {
 		<p>This is the about page.</p>
-		<button hx-get="/" hx-swap="outerHTML transition:true" hx-target="h1" hx-select="h1">
+		<button hx-get="/" hx-swap="outerHTML" hx-target="h1" hx-select="h1">
 			Swap the title!
 		</button>
 	}

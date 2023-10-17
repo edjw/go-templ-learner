@@ -1,0 +1,12 @@
+# flyctl launch added from .gitignore
+**/*_templ.go
+**/tmp
+**/node_modules
+**/public/global.css
+**/app
+**/main
+**/go-templ-learner
+
+# flyctl launch added from node_modules/.pnpm/tailwindcss@3.3.3/node_modules/tailwindcss/stubs/.gitignore
+!node_modules/.pnpm/tailwindcss@3.3.3/node_modules/tailwindcss/stubs/**/*
+fly.toml
