@@ -10,4 +10,4 @@ css:
 	npx tailwindcss -i ./assets/global.css -o ./public/global.css --watch --minify
 
 run:
-	concurrently "air main.go" "make css"
+	concurrently "air main.go" "make css" "browser-sync start --proxy "127.0.0.1:8080" --files "components/*.templ" --reloadDelay 3000 --no-open --no-notify"
