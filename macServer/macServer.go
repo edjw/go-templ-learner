@@ -36,6 +36,8 @@ func Server() {
 
 	log.Printf("\n\n😀😀👏👏👏\nListening on:\nhttp://%s:%v\n\n", ip, port)
 
+	// Except it'll actually be http://localhost:3000 if we're using browser-sync
+
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal(err)
 	}

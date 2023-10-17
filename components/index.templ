@@ -1,0 +1,10 @@
+package components
+
+templ Index() {
+	@Layout("Home") {
+		<p>This is the home page.</p>
+		<button hx-get="/about" hx-swap="outerHTML transition:true" hx-target="h1" hx-select="h1">
+			Swap the title!
+		</button>
+	}
+}

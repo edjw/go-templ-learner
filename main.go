@@ -26,9 +26,11 @@ func main() {
 	http.Handle("/public/", http.StripPrefix("/public", fileServer))
 
 	// Serve the app.
-	component := components.Layout()
+	index := components.Index()
+	http.Handle("/", templ.Handler(index))
 
-	http.Handle("/", templ.Handler(component))
+	about := components.About()
+	http.Handle("/about", templ.Handler(about))
 
 	macServer.Server()
 }

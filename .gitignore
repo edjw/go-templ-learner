@@ -1,4 +1,4 @@
 *_templ.go
 tmp/
 node_modules/
-public
+public/global.css
