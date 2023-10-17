@@ -2,11 +2,12 @@ package main
 
 import (
 	"embed"
-	"go-templ-learner/components"
-	"go-templ-learner/macServer"
 	"io/fs"
 	"log"
 	"net/http"
+
+	"github.com/edjw/go-templ-learner/components"
+	"github.com/edjw/go-templ-learner/macServer"
 
 	"github.com/a-h/templ"
 )
