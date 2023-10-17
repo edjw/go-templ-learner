@@ -2,13 +2,14 @@ package main
 
 import (
 	"embed"
+	"fmt"
 	"io/fs"
 	"log"
 	"net/http"
 
 	// "github.com/edjw/go-templ-learner/components"
+	"github.com/a-h/templ"
 	"github.com/edjw/go-templ-learner/macServer"
-	// "github.com/a-h/templ"
 )
 
 //go:embed public/*
@@ -25,6 +26,7 @@ func main() {
 	fileServer := http.FileServer(http.FS(publicFS))
 	http.Handle("/public/", http.StripPrefix("/public", fileServer))
 
+	fmt.Print(templ.Classes()...)
 	// Serve the app.
 	// index := components.Index()
 	// http.Handle("/", templ.Handler(index))
