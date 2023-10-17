@@ -10,7 +10,7 @@ bin = "./tmp/main"
 cmd = "templ generate && go build -o ./tmp/main ."
 
 delay = 1000
-exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+exclude_dir = ["assets", "tmp", "node_modules", "global"]
 exclude_file = []
 
 # templ specific
