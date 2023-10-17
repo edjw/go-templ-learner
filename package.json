@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"buildTailwind": "tailwindcss -i ./assets/global.css -o ./public/global.css --minify"
+	},
 	"devDependencies": {
 		"tailwindcss": "^3.3.3"
 	},
