@@ -6,10 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/edjw/go-templ-learner/components"
+	// "github.com/edjw/go-templ-learner/components"
 	"github.com/edjw/go-templ-learner/macServer"
-
-	"github.com/a-h/templ"
+	// "github.com/a-h/templ"
 )
 
 //go:embed public/*
@@ -27,11 +26,11 @@ func main() {
 	http.Handle("/public/", http.StripPrefix("/public", fileServer))
 
 	// Serve the app.
-	index := components.Index()
-	http.Handle("/", templ.Handler(index))
+	// index := components.Index()
+	// http.Handle("/", templ.Handler(index))
 
-	about := components.About()
-	http.Handle("/about", templ.Handler(about))
+	// about := components.About()
+	// http.Handle("/about", templ.Handler(about))
 
 	macServer.Server()
 }
