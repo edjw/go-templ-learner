@@ -7,8 +7,8 @@ import (
 	"log"
 	"net/http"
 
-	// "github.com/edjw/go-templ-learner/components"
 	"github.com/a-h/templ"
+	"github.com/edjw/go-templ-learner/components"
 	"github.com/edjw/go-templ-learner/macServer"
 )
 
@@ -28,11 +28,11 @@ func main() {
 
 	fmt.Print(templ.Classes()...)
 	// Serve the app.
-	// index := components.Index()
-	// http.Handle("/", templ.Handler(index))
+	index := components.Index()
+	http.Handle("/", templ.Handler(index))
 
-	// about := components.About()
-	// http.Handle("/about", templ.Handler(about))
+	about := components.About()
+	http.Handle("/about", templ.Handler(about))
 
 	macServer.Server()
 }
