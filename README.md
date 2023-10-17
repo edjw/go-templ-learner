@@ -3,7 +3,7 @@
 Absolutely obscene build command for Render.com to build Go with Templ, Tailwind and HTMX.
 
 ```bash
-export GOPATH=/opt/render/project/go && export PATH=$PATH:$GOPATH/bin && go install github.com/a-h/templ/cmd/templ@v0.2.408 && $GOPATH/bin/templ generate && npm install && npx tailwindcss -i ./assets/global.css -o ./public/global.css --minify && go build -tags netgo -ldflags '-s -w' -o app
+export GOPATH=/opt/render/project/go && export PATH=$PATH:$GOPATH/bin && go install github.com/a-h/templ/cmd/templ@v0.2.408 && $GOPATH/bin/templ generate && npm install && npm run build_tailwind && go build -tags netgo -ldflags '-s -w' -o app
 ```
 
 1. Install Templ after some funky path stuff.
